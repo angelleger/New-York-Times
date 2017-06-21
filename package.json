@@ -1,0 +1,39 @@
+{
+  "name": "theorem_demo-project",
+  "private": true,
+  "author": "Ad Platform Innovations",
+  "version": "1.0.0",
+  "main": "src/index.jsx",
+  "PaidPost": {
+    "clientName": "Theorem",
+    "clientPath": "theorem",
+    "projectName": "Demo Project",
+    "projectPath": "demo-project",
+    "clientLogoPath": "images/logo.svg",
+    "clientLink": "#",
+    "showClientName": false,
+    "socialImagePath": "images/social.png"
+  },
+  "scripts": {
+    "build": "scaffolding -p --env.preset=nyt5_adv.preview",
+    "clean": "rimraf build && rimraf .tmp",
+    "eslint": "eslint **/*.{js,jsx}",
+    "guide-build": "styleguidist-bootstrap build",
+    "guide": "styleguidist-bootstrap",
+    "preview": "preview",
+    "prod": "scaffolding -p",
+    "publish": "publish",
+    "serve": "dev-server-bootstrap",
+    "stylelint": "stylelint **/*.scss --syntax scss && stylelint **/*.css"
+  },
+  "dependencies": {
+    "paidpost-core": "github:nytpi/paidpost-core#v3.8.1"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2"
+  },
+  "devDependencies": {
+    "nytpi-sass-utils": "github:nytpi/nytpi-sass-utils#v2.3.1",
+    "scaffolding-next": "github:nytpi/scaffolding-next#v4.11.3"
+  }
+}

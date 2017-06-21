@@ -1,0 +1,181 @@
+@import '~nytpi-sass-utils/index';
+@import '~nytpi-sass-utils/size-class';
+@import '~nytpi-sass-utils/font-size';
+
+// Fonts
+@import url( 'https://fonts.googleapis.com/css?family=Prata');
+@include set-pspx-ratio(1);
+
+/////////////////////////////
+// Write your styles here! //
+/////////////////////////////
+
+// Make sure you encapsulate any "page global" styles within a className
+// that's applied to the root PaidPostArticle view on the page:
+// <PaidPostArticle className={scss.article}>{ ... }</PaidPostArticle>
+
+.article {
+  background-color: black;
+  // Also note: Webpack's css-loader won't apply this className
+  // to *any* view until you actually write some styles within here.
+  .borders {
+    h1 {
+
+      border-top: 5px solid white;
+      border-bottom: 5px solid white;
+      padding: 5px;
+    }
+
+  }
+
+  .Figure span,
+  .PhotoGrid span {
+    color: #b2b2b2;
+
+  }
+
+  .Figure {
+    cite {
+      color: #353535;
+
+    }
+  }
+
+  .dropCap p:first-of-type::first-letter {
+    font-family: 'Prata', serif;
+    font-size: 90px;
+    font-weight: normal;
+    margin-top: 6px;
+
+  }
+
+  .headlineBottom,
+  .headlineTop h1 {
+    font-family: 'Prata', serif;
+    letter-spacing: 1px;
+    font-size: 78px;
+    font-weight: normal;
+    color: white;
+    border-bottom: 5px solid white;
+    line-height: 95px;
+    padding-bottom: 4px;
+
+  }
+
+  .headerWithAuthor h1 {
+    font-family: 'Prata', serif;
+    letter-spacing: 1px;
+    font-size: 50px;
+    font-weight: normal;
+    color: white;
+    line-height: 62px;
+    padding-bottom: 4px;
+  }
+
+  .headerWithAuthor h2 {
+    font-weight: normal;
+    color: white;
+
+  }
+
+  .headlineTop h1 {
+    text-align: left;
+  }
+
+  .Slideshow {
+
+    figcaption {
+      width: 100%;
+    }
+
+    button {
+      background: transparent;
+
+    }
+
+    span {
+
+      color: #b2b2b2;
+    }
+
+  }
+
+  h1 {
+    font-family: 'Prata', serif;
+    letter-spacing: 1px;
+    font-size: 49px;
+    font-weight: normal;
+    line-height: 72px;
+    -webkit-text-shadow: 1px 1px 21px rgba(0, 0, 0, 0.35);
+    -moz-text-shadow: 1px 1px 21px rgba(0, 0, 0, 0.35);
+    text-shadow: 1px 1px 21px rgba(0, 0, 0, 0.35);
+  }
+
+  p {
+    line-height: 31px;
+    font-size: 17px;
+    color: white;
+  }
+
+  @media (max-width: 640px){
+ .headlineBottom,
+  .headlineTop h1 {
+    font-family: 'Prata', serif;
+    letter-spacing: 1px;
+    font-size: 56px;
+    font-weight: normal;
+    color: white;
+    border-bottom: 5px solid white;
+    line-height: 62px;
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: 4px;
+
+  }
+
+  .headerWithAuthor h1 {
+    font-family: 'Prata', serif;
+    letter-spacing: 1px;
+    font-size: 36px;
+    font-weight: normal;
+    color: white;
+    line-height: 38px;
+    padding-bottom: 4px;
+  }
+
+  h1 {
+    font-family: 'Prata', serif;
+    letter-spacing: 1px;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 47px;
+    -webkit-text-shadow: 1px 1px 21px rgba(0, 0, 0, 0.35);
+    -moz-text-shadow: 1px 1px 21px rgba(0, 0, 0, 0.35);
+    text-shadow: 1px 1px 21px rgba(0, 0, 0, 0.35);
+  }
+
+.Slideshow {
+ 
+  .slick-dotted .slick-dots > li button {
+    background-color: #4d4d4d;
+    font-size: 22px;
+  }
+
+ .slick-dotted .slick-dots > li {
+   margin: 0px 5px;
+ }
+ .slick-dotted .slick-dots > li.slick-active button::before {
+ background-color: white;
+
+ }
+
+
+}
+
+
+  }
+
+}
+
+// Make sure this is the last line of the file.
+@include set-pspx-ratio(2);
